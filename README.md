@@ -2,7 +2,7 @@
 
 ## Student Details
 
-- **Full Name:** `<Carlin Canlas`
+- **Full Name:** `Carlin Canlas`
 - **CCID:** `marycarl`
 
 ## References and Resources
@@ -11,7 +11,7 @@ List any resources used here, or simply put `N/A` if not applicable.
 
 ## Verbal Collaboration
 
-NA  
+N/A  
 
 | Student Name | CCID      |
 | ------------ | --------- |
