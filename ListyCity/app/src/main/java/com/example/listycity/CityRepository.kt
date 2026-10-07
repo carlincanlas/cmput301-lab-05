@@ -1,7 +1,6 @@
 package com.example.listycity
 
 import androidx.compose.runtime.mutableStateListOf
-import androidx.compose.runtime.mutableStateListOf
 import com.google.firebase.Firebase
 import com.google.firebase.firestore.firestore
 
@@ -17,14 +16,34 @@ class CityRepository {
     val cities: List<City>
         get() = _cities
 
+    init {
+        citiesRef.addSnapshotListener { snapshot, error ->
+            if (error != null ) {
+                return@addSnapshotListener
+            }
+
+            _cities.clear()
+
+            snapshot?.documents?.forEach { document ->
+                val city = document.toObject(City::class.java)
+                if (city != null) {
+                    _cities.add(city)
+                }
+            }
+        }
+    }
+
     fun addCity(city: City) {
-        _cities.add(city)
+        citiesRef.document(city.name).set(city)
     }
 
     fun updateCity(oldCity: City, updatedCity: City) {
-        val index = _cities.indexOf(oldCity)
-        if (index != -1) {
-            _cities[index] = updatedCity
-        }
+        citiesRef.document(oldCity.name).delete()
+        citiesRef.document(updatedCity.name).set(updatedCity)
     }
+
+    fun deleteCity(city: City) {
+        citiesRef.document(city.name).delete()
+    }
+
 }
