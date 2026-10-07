@@ -2,13 +2,13 @@
 
 ## Student Details
 
-- **Full Name:** `Carlin Canlas`
-- **CCID:** `marycarl`
+- **Full Name:** `Carlin Canlas` 
+- **CCID:** `marycarl`  
 
 ## References and Resources
 
-https://firebase.google.com/
-Lab 5 Firestore Integration Instructions.pdf
+https://firebase.google.com/  
+Lab 5 Firestore Integration Instructions.pdf  
 
 ## Verbal Collaboration
 
