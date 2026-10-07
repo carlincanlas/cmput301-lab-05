@@ -7,13 +7,9 @@
 
 ## References and Resources
 
-List any resources used here, or simply put `N/A` if not applicable.
+https://firebase.google.com/
+Lab 5 Firestore Integration Instructions.pdf
 
 ## Verbal Collaboration
 
-N/A  
-
-| Student Name | CCID      |
-| ------------ | --------- |
-| `student`    | `student` |
-| `<Add more>` | `<CCID>`  |
+N/A
