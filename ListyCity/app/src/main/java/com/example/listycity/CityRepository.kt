@@ -1,8 +1,13 @@
 package com.example.listycity
 
 import androidx.compose.runtime.mutableStateListOf
+import androidx.compose.runtime.mutableStateListOf
+import com.google.firebase.Firebase
+import com.google.firebase.firestore.firestore
 
 class CityRepository {
+    private val db = Firebase.firestore
+    private val citiesRef = db.collection("cities")
     private val _cities = mutableStateListOf(
         City("Edmonton", "AB"),
         City("Vancouver", "BC"),
